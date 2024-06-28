@@ -1,10 +1,15 @@
+import RegisterPage from "./pages/RegisterPage"
 
 function App() {
 
   return (
-    <>
-      <h1>App</h1>
+    <> 
+    <div className="w-full h-screen bg">
+    <RegisterPage></RegisterPage>
+    </div>
+   
     </>
+ 
   )
 }
 
