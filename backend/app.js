@@ -1,12 +1,21 @@
-import express from 'express';
+const express = require("express");
+const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config();
+const connectMongodb = require("./init/mongodb");
+const { authRoute } = require("./routes");
 
+//init app
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+//connect database
+connectMongodb();
 
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-});
+//third-party midleware
+app.use(express.json({ limit: "500mb"}));
+app.use(bodyParser.urlencoded({ limit: "500mb", extended: true }));
+
+//route section
+app.use("/api/v1/auth", authRoute);
+
+module.exports = app;
