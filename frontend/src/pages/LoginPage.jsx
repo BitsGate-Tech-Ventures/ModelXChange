@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
+import { FaKey } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 function LoginPage() {
   return (
@@ -18,7 +20,7 @@ function LoginPage() {
     <input type="text" className="w-11/12 bg-transparent outline-none placeholder-black" placeholder="Enter your email" />
 
     <div className="w-2/12 flex items-center justify-center">
-    <i className="fa-solid fa-envelope text-xl"></i>
+    <FaEnvelope />
     </div>
     </div>
 
@@ -26,7 +28,7 @@ function LoginPage() {
     <div className="flex border-b-black border-b-2 mx-5 my-7 py-1">
     <input type="text" className="w-11/12 bg-transparent outline-none placeholder-black" placeholder="Enter your password" />
     <div className="w-2/12 flex items-center justify-center">
-    <i className="fa-solid fa-key text-xl"></i>
+    <FaKey />
     </div>
     </div>
 

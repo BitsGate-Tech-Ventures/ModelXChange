@@ -2,6 +2,10 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { useFormik } from "formik"
 
+import { FaKey } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+
 function RegisterPage() {
 
   const formik = useFormik({
@@ -39,7 +43,7 @@ function RegisterPage() {
       <input type="text" id="name" className="w-11/12 bg-transparent outline-none placeholder-black" placeholder="Enter your name" value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} />
 
       <div className="w-2/12 flex items-center justify-center">
-      <i className="fa-solid fa-user text-xl"></i>
+      <FaUser />
       </div>
 
     </div>
@@ -50,7 +54,7 @@ function RegisterPage() {
     <input type="email" id="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} className="w-11/12 bg-transparent outline-none placeholder-black" placeholder="Enter your email" />
 
     <div className="w-2/12 flex items-center justify-center">
-    <i className="fa-solid fa-envelope text-xl"></i>
+    <FaEnvelope />
     </div>
 
     </div>
@@ -61,7 +65,7 @@ function RegisterPage() {
     <input type="password" className="w-11/12 bg-transparent outline-none placeholder-black" id="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter your password" />
 
     <div className="w-2/12 flex items-center justify-center">
-    <i className="fa-solid fa-key text-xl"></i>
+    <FaKey />
     </div>
 
     </div>
@@ -72,7 +76,7 @@ function RegisterPage() {
     <input type="password" className="w-11/12 bg-transparent outline-none placeholder-black" placeholder="Confirm Password" id="confirmpassword" value={formik.values.confirmpassword} onChange={formik.handleChange} onBlur={formik.handleBlur} />
 
     <div className="w-2/12 flex items-center justify-center">
-    <i className="fa-solid fa-key text-xl"></i>
+    <FaKey />
     </div>
 
     </div>
@@ -82,7 +86,7 @@ function RegisterPage() {
     </div>
 
 
-    <Link className="mx-5 my-5 py-2 flex items-center justify-center cursor-pointer">
+    <Link to='/Login' className="mx-5 my-5 py-2 flex items-center justify-center cursor-pointer">
       <p className="text-sm">Already have an account? Login </p>
     </Link>
 
