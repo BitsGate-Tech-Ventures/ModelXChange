@@ -1,12 +1,24 @@
-import express from 'express';
+import express from "express";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+import { connectDB } from "./data/database.js";
+import authRoute from "./routes/authRoute.js";
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+app.use(express.json());
+app.use(cookieParser());
+
+app.use("/api/auth", authRoute);
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
 });
 
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server started on port:${process.env.PORT}`);
 });
+
+connectDB().catch((err) => console.error(err));
