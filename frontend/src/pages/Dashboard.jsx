@@ -23,23 +23,23 @@ const Dashboard = () => {
 
       <div className="flex-1 p-6">
         <p className='text-3xl pb-4'>New releases</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img1} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 1</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
           </div>
 
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img2} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 2</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
           </div>
 
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img3} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 3</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
@@ -59,14 +59,14 @@ const Dashboard = () => {
          
 
          
-        <div className="bg-white p-6 rounded-lg shadow-md">
-            <img src={img4} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
+        <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+            <img src={img4} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4 "/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 1</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
           </div>
 
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img5} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 2</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
@@ -74,7 +74,7 @@ const Dashboard = () => {
 
 
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img6} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 3</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
@@ -91,21 +91,21 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img7} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 1</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
           </div>
 
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img8} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 2</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>
           </div>
 
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             <img src={img9} alt="Card 1" className="w-full h-48 object-cover rounded-md mb-4"/>
             <h2 className="text-2xl text-black font-bold mb-4">Product 3</h2>
             <figcaption className="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis cum earum voluptatem debitis dolore laudantium dolores alias accusamus omnis?</figcaption>

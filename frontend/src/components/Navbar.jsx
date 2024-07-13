@@ -30,8 +30,8 @@ function Navbar() {
 
           {/* Buttons */}
           <div className={`hidden lg:flex justify-center space-x-12 items-center ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-            <Link to='/Login' className="py-2 px-3 border rounded-md">Login</Link>
-            <Link to='/Register' className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 border rounded-md">Create an account</Link>
+            <Link to='/Login' className="py-2 px-3 border rounded-md transition duration-300 ease-in-out transform hover:scale-105">Login</Link>
+            <Link to='/Register' className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 border rounded-md transition duration-300 ease-in-out transform hover:scale-105">Create an account</Link>
           </div>
 
           {/* Mobile menu icon */}
@@ -50,9 +50,15 @@ function Navbar() {
               <li><a href="#" onClick={() => dispatch(closeMobileMenu())}>Pricing</a></li>
               <li><a href="#" onClick={() => dispatch(closeMobileMenu())}>Docs</a></li>
               <li><a href="#" onClick={() => dispatch(closeMobileMenu())}>Contact</a></li>
+
+              <br />
+
               <li>
                 <Link to='/Login' className="py-2 px-3 border rounded-md" onClick={() => dispatch(closeMobileMenu())}>Login</Link>
               </li>
+
+              <br />
+      
               <li>
                 <Link to='/Register' className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 border rounded-md" onClick={() => dispatch(closeMobileMenu())}>Create an account</Link>
               </li>

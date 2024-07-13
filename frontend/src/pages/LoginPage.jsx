@@ -25,65 +25,61 @@ function LoginPage() {
   });
 
   return (
-    <div className="h-screen w-full flex items-center justify-center tracking-wider">
-      <div className="w-11/12 sm:w-5/12 md:w-3/12 text-sm glass">
+    <div className="h-screen w-full flex items-center justify-center tracking-wider bg-gray-900">
+      <div className="w-full max-w-md p-8 bg-gray-800 shadow-md rounded-lg">
         <div className="w-full text-center my-3">
-          <h2 className="text-2xl text-black font-medium">Login</h2>
+          <h2 className="text-2xl text-white font-medium">Login</h2>
         </div>
 
         <form className="my-2" autoComplete="off" onSubmit={formik.handleSubmit}>
-          <div className="flex border-b-black border-b-2 mx-5 my-7 py-1">
+          <div className="flex items-center border-b-2 border-gray-600 mx-1 my-5 py-2">
             <input
               type="email"
               id="email"
-              className="w-11/12 bg-transparent outline-none placeholder-black"
+              className="flex-grow bg-transparent outline-none placeholder-gray-400 text-white px-2"
               placeholder="Enter your email"
               {...formik.getFieldProps('email')}
             />
-            <div className="w-2/12 flex items-center justify-center">
-              <FaEnvelope />
-            </div>
+            <FaEnvelope className="text-gray-400 mx-2" />
           </div>
           {formik.touched.email && formik.errors.email ? (
-            <div className="text-red-500 text-xs mx-5">{formik.errors.email}</div>
+            <div className="text-red-500 text-xs mx-1">{formik.errors.email}</div>
           ) : null}
 
-          <div className="flex border-b-black border-b-2 mx-5 my-7 py-1">
+          <div className="flex items-center border-b-2 border-gray-600 mx-1 my-5 py-2">
             <input
               type="password"
               id="password"
-              className="w-11/12 bg-transparent outline-none placeholder-black"
+              className="flex-grow bg-transparent outline-none placeholder-gray-400 text-white px-2"
               placeholder="Enter your password"
               {...formik.getFieldProps('password')}
             />
-            <div className="w-2/12 flex items-center justify-center">
-              <FaKey />
-            </div>
+            <FaKey className="text-gray-400 mx-2" />
           </div>
           {formik.touched.password && formik.errors.password ? (
-            <div className="text-red-500 text-xs mx-5">{formik.errors.password}</div>
+            <div className="text-red-500 text-xs mx-1">{formik.errors.password}</div>
           ) : null}
 
-          <div className="mx-5 flex items-center justify-end cursor-pointer">
-            <p>Forgot password?</p>
+          <div className="mx-1 flex items-center justify-end cursor-pointer">
+            <p className="text-gray-400">Forgot password?</p>
           </div>
 
-          <div className="mx-5 my-2 py-2">
-            <button type="submit" className="bg-black w-full h-[35px] rounded-sm text-white">Login</button>
+          <div className="mx-1 my-2 py-2">
+            <button type="submit" className="bg-gray-700 w-full h-[40px] rounded text-white">Login</button>
           </div>
 
-          <div className="text-center">
-            or
+          <div className="text-center text-gray-400 my-2">
+            <p>or</p>
           </div>
 
-          <div className="mx-5 my-2 py-2">
-            <button className="bg-black w-full h-[35px] rounded-sm text-white flex items-center justify-center gap-5">
+          <div className="mx-1 my-2 py-2">
+            <button className="bg-gray-700 w-full h-[40px] rounded text-white flex items-center justify-center gap-2">
               <FaGoogle /> Continue with Google
             </button>
           </div>
 
-          <Link to='/Register' className="mx-5 my-5 py-2 flex items-center justify-center cursor-pointer">
-            <p className="text-sm">Don't have an account? Register</p>
+          <Link to='/Register' className="mx-1 my-5 py-2 flex items-center justify-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
+            <p className="text-sm text-gray-400">Don't have an account? Register</p>
           </Link>
         </form>
       </div>

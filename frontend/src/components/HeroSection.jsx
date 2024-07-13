@@ -13,7 +13,7 @@ const HeroSection = () => {
 
       <p className='mt-10 text-center text-lg text-neutral-500 max-w-4xl'>Embrace the revolution where AI transforms software landscapes. Discover Akira AI Marketplace, the versatile platform empowering innovators to drive this change forward.</p>
 
-      <div className="flex justify-center my-10">
+      <div className="flex justify-center my-10 transition duration-300 ease-in-out transform hover:scale-105">
         <a href="#"className='bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md' >Explore MarketPlace</a>
       </div>
 
