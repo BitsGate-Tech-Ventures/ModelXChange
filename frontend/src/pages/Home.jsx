@@ -1,5 +1,6 @@
 import HeroSection from "../components/HeroSection"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 function Home() {
   return (
@@ -9,8 +10,12 @@ function Home() {
       <div className="max-w-7xl mx-auto pt-29 px-6">
 
       <HeroSection></HeroSection>
+
+      <Footer></Footer>
       
       </div>
+
+      
       
     </>
    

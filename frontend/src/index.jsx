@@ -3,11 +3,13 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css'; // Add your global styles here
 
+
+
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>
 );

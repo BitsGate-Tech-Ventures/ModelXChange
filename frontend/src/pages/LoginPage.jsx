@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import { FaKey } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
+
+import { FaEnvelope, FaKey, FaGoogle} from "react-icons/fa";
 
 function LoginPage() {
   return (
@@ -32,15 +32,26 @@ function LoginPage() {
     </div>
     </div>
 
+   
+
     <div className="mx-5 flex items-center justify-end cursor-pointer">
-    <p>forgot password</p>
+    <p>forgot password ?</p>
     </div>
 
 
-    <div className="mx-5 my-7 py-2">
+    <div className="mx-5 my-2 py-2">
     <button className="bg-black w-full h-[35px] rounded-sm text-white">Login</button>
     </div>
 
+
+    <div className="text-center">
+      or
+    </div>
+
+
+    <div className="mx-5 my-2 py-2">
+            <button className="bg-black w-full h-[35px] rounded-sm text-white flex items-center justify-center gap-5">  <FaGoogle /> Continue with google</button>
+    </div>
 
     <Link to='/Register' className="mx-5 my-5 py-2 flex items-center justify-center cursor-pointer">
       <p className="text-sm">Don't have an account? Register </p>
