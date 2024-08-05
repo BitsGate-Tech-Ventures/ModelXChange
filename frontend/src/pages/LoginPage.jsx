@@ -4,6 +4,17 @@ import { useFormik } from "formik";
 import { FaEnvelope, FaKey, FaGoogle } from "react-icons/fa";
 import * as Yup from "yup";
 
+import { loginUser } from '../services/api';
+
+const onSubmit = async (values) => {
+  try {
+    const response = await loginUser(values);
+    console.log(response); // Handle success or error messages
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 function LoginPage() {
   const formik = useFormik({
     initialValues: {
@@ -18,10 +29,7 @@ function LoginPage() {
         .min(6, "Password must be at least 6 characters")
         .required("Password is required"),
     }),
-    onSubmit: values => {
-      // Handle form submission logic here
-      console.log(values);
-    },
+    onSubmit,
   });
 
   return (

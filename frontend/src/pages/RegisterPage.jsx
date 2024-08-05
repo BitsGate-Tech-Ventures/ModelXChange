@@ -4,6 +4,17 @@ import { useFormik } from "formik";
 import { FaKey, FaEnvelope, FaUser, FaGoogle } from "react-icons/fa";
 import * as Yup from "yup";
 
+import { registerUser } from '../services/api';
+
+const onSubmit = async (values) => {
+  try {
+    const response = await registerUser(values);
+    console.log(response); // Handle success or error messages
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 function RegisterPage() {
   const formik = useFormik({
     initialValues: {
@@ -26,10 +37,7 @@ function RegisterPage() {
         .oneOf([Yup.ref("password"), null], "Passwords must match")
         .required("Confirm Password is required"),
     }),
-    onSubmit: values => {
-      // Handle form submission logic here
-      console.log(values);
-    },
+    onSubmit,
   });
 
   return (
@@ -87,7 +95,7 @@ function RegisterPage() {
               type="password"
               id="confirmpassword"
               className="flex-grow bg-transparent outline-none placeholder-gray-400 text-white px-2"
-              placeholder="Confirm Password"
+              placeholder="Confirm your password"
               {...formik.getFieldProps('confirmpassword')}
             />
             <FaKey className="text-gray-400 mx-2" />
